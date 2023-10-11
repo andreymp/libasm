@@ -16,11 +16,12 @@ void ft_strlen_test(const char *str) {
     unsigned int origin = strlen(str);
     unsigned int copy = ft_strlen(str);
     
-    printf("str :: {%s}, origin :: %d, copy :: %d, equality :: %s", str, origin, copy, origin == copy);
+    printf("str :: {%s}, origin :: %d, copy :: %d, equality :: %s", str, origin, copy, origin == copy ? "OK" : "KO");
 }
 
 int main() {
-    prinft("---ft_strlen---");
+    puts("---ft_strlen---");
+    ft_strlen_test("Hello, world!");
 
     return 0;
 }
