@@ -6,7 +6,7 @@
 #    By: jobject <jobject@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 21:38:45 by jobject           #+#    #+#              #
-#    Updated: 2023/10/10 17:30:54 by jobject          ###   ########.fr        #
+#    Updated: 2023/10/11 16:11:20 by jobject          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ RAN			=	ranlib
 SRC			=	src/ft_strlen.s \
 				src/ft_strcpy.s \
 				src/ft_strcmp.s \
+				src/ft_write.s
 
 OBJ			=	$(SRC:.s=.o)
 OBJ_DIR		=	.obj

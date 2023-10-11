@@ -1,17 +1,26 @@
 section .text
-    global _ft_strcmp
+    global ft_strcmp
 
-_ft_strcmp:
-    xor rax, rax
+    ft_strcmp:
+        xor rax, rax
+        xor rbx, rbx
+        push r8
+        mov r8, 0
 
-_while_loop:
-    inc rax
-    mov ch, byte [rax + rsi]
-    mov cl, byte [rax + rdi]
-    cmp ch, 0
-    je _return
-    cmp cl, 0
-    je _return
+    _while_loop:
+        mov al, byte [rsi + r8]
+        mov bl, byte [rdi + r8]
+        cmp al, 0
+        je _return
+        cmp bl, 0
+        je _return
+        cmp al, bl
+        jne _return
+        inc r8
+        jmp _while_loop
 
-_return:
-    
+
+    _return:
+        pop r8
+        sub rax, rbx
+        ret 
