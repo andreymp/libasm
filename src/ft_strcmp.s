@@ -8,8 +8,8 @@ section .text
         mov r8, 0
 
     _while_loop:
-        mov al, byte [rsi + r8]
-        mov bl, byte [rdi + r8]
+        mov al, byte [rdi + r8]
+        mov bl, byte [rsi + r8]
         cmp al, 0
         je _return
         cmp bl, 0
